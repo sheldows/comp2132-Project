@@ -31,9 +31,7 @@ $tie: orange;
 }
 
 
-.player {
-    margin: 10px;
-}
+
 
 .button {
     background-color: aquamarine;
@@ -64,9 +62,7 @@ $tie: orange;
 
 
 
-#top>h2 {
-    margin-left: 20px;
-}
+
 
 #game>div {
     margin: 0 auto;
@@ -76,10 +72,44 @@ $tie: orange;
     background-color: antiquewhite;
 }
 
+div#top {
+    background-color: black;
+    background-image: url('../images/black-white.jpg'); 
+    background-position: 300px;
+    background-repeat: no-repeat;
+    background-size: 912px;
+    background-position: left;
+    color: white;
+}
+
+#top>h1 {
+
+    margin-left: 20px;
+
+}
+
+
+
 #players>div {
     border:1px solid sandybrown;
     padding: 10px;
 }
+
+
+.player {
+    margin: 10px;
+}
+
+#player1.player {
+    //margin:10px;
+    margin-left: 40px;
+
+    }
+    
+#player2.player {
+    //margin: 10px;
+    margin-right: 40px;
+    }
 
 #results {
     color: plum;
@@ -105,6 +135,10 @@ h2.looser {
 }
 h2.tie {
     color: $tie;
+}
+
+h2.info {
+    color: pink;
 }
 
 .player>div.winner {

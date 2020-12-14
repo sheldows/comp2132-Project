@@ -672,6 +672,37 @@ class game{
 
 
 
+
+let diceCollection = document.getElementsByClassName('dice');
+//alert(diceCollection.length);
+for(let ii=0;ii<diceCollection.length;ii++) {
+    //alert(diceCollection[ii].className);
+    diceCollection[ii].addEventListener('click',diceEffect);
+    //diceCollection[ii].addEventListener('hover',diceEffect);
+}
+
+
+function diceEffect(e) {
+    let th = e.target;
+    //alert(th.offsetWidth);
+
+    let old = th.getAttribute('value');
+
+    let dicenew = new dice();
+
+    let textState = false;
+    if (th.innerText.trim().length >0) {textState = true;}
+    //minus border
+    drawDice(th,dicenew.roll(),th.offsetWidth-2,textState);
+
+    let nw = th.getAttribute('value');
+
+    showPopup(`The value of this dice is ${old}, the new value is ${nw}`,"Dice Value",'info');
+
+}
+
+
+
 let dicet0 = document.getElementById("dicet0");
 let dicet1 = document.getElementById("dicet1");
 let dicet2 = document.getElementById("dicet2");
@@ -718,7 +749,7 @@ document.getElementById("reset").addEventListener('click', function(e) {
 
 
 document.getElementById("help").addEventListener('click', function(e) {
-    showPopup("Click 'Start Game' to start the game. Click 'Roll Again' for next dice roll. Click 'Reset Game' to start the game again over","Need Help?")
+    showPopup("Click 'Start Game' to start the game. Click 'Roll Again' for next dice roll. Click 'Reset Game' to start the game again over. Cool trick click on a dice to flip the dice value!","Need Help?","info")
 });
 
 //dice0.setAttribute("src","images/dice-faces-six-ivory-white-55711126.png");
@@ -848,4 +879,5 @@ dice.style = `width: ${342*scale}px; height: ${342*scale}px; border: 1px solid g
 if (textDisplay) {
     dice.innerText = number;
 }
+dice.setAttribute('value',number);
 }
