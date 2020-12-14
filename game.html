@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<!-- 
+Sheldon Irving
+A00073833
+Comp 2132
+Final Project
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMP 2132 Final Project: Dice Game</title>
+    <link rel="stylesheet" href="styles/style1c.css">
+</head>
+<body>
+
+    <section id="pop-up">
+        <h2>Hello, User</h2>
+        <button id="btn-close">&#10005;</button>
+        <p>Instructions:</p>
+        <p>This is a dice game created for fun.</p>
+        <p>Read the instructions and click Start Game when ready</p>
+
+    </section>
+
+<div id="game">
+    <div id="top">
+        <div id="disceset" class="inline">
+            <div id="dicet0" class="dice inline">
+            </div>
+            <div id="dicet1" class="dice inline">
+            </div>
+            <div id="dicet2" class="dice inline">
+            </div>
+            <div id="dicet3" class="dice inline">
+            </div>
+            <div id="dicet4" class="dice inline">
+            </div>
+            <div id="dicet5" class="dice inline">
+            </div>
+            
+        </div>
+        <h2 class="inline">Dice Game</h2>
+
+    </div>
+<div id="players">
+   <div id="player1" class="player inline">
+    
+       <h2 class="name"><div id="dice0n" class="inline"></div> Player1</h2>
+        <div id="dice0" class="dice inline">
+        </div>
+
+        <div id="dice1" class="dice inline">
+        </div>
+
+        <div class="score">
+            <p class="centre">0</p>
+        </div>
+        <div class="totalscore">
+            <p class="centre">0</p>
+        </div>
+    </div>
+
+
+    <div id="player2" class="player inline">
+        
+        <h2 class="name"><div id="dice1n"></div> Player2</h2>
+        <div id="dice2" class="dice inline">
+        </div>
+    
+        <div id="dice3" class="dice inline">
+        </div>
+
+        <div class="score">
+            <p class="centre">0</p>
+        </div>
+        <div class="totalscore">
+            <p class="centre">0</p>
+        </div>
+    </div>
+</div>
+
+<div id="buttons">
+    <div class="centre">
+        <button id="start" class="button">Start Game</button>
+        <button id="reset" class="button">Reset Game</button>
+        <button id="help" class="button">Help Me</button>
+    </div>
+</div>
+<div id="results">
+    <p class="centre">Click on the buttons above to start</p>
+</div>
+<div id="instructions">
+    <article>
+        <h2>How to Play</h2>
+        
+        <ul>
+            <li>Click "Start Game" to start the game and to cast the first roll for round 1</li>
+            <li>Click "Roll Dice" button for round number 2</li>
+            <li>Click "Roll Dice" button for round number 3</li>
+            <li>After 3 rounds the winner is announced</li>
+            <li>The "Reset Game" button has to be pushed to reset the game</li>
+            <li>Alternately, the "Reset Game" button can be clicked at any time to rest the game</li>
+
+        </ul>
+        <h2>Scoring</h2>
+        <ul>
+            <li>Rolling a "1" or double "1" on the Dice will give an immediate 0 score for the round</li>
+            <li>Rolling any number on the dice will give you a score of the sum of those two number</li>
+            <li>Rolling doubles will give you s bonus for 2x the score for that round</li>
+        </ul>
+    </article>
+</div>
+
+</div>
+
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/game.js"></script>
+
+    
+</body>
+</html>

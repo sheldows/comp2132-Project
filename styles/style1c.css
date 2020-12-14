@@ -1,0 +1,168 @@
+/*
+Sheldon Irving
+A00073833
+Comp 2132
+Final Project
+*/
+.inline {
+  display: inline-block;
+}
+
+.dice {
+  margin: 5px;
+}
+
+.player {
+  margin: 10px;
+}
+
+.button {
+  background-color: aquamarine;
+  color: blueviolet;
+  border: 1px solid orange;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.button:hover {
+  background-color: aqua;
+}
+
+.button:disabled {
+  background-color: beige;
+}
+
+#game {
+  width: 1024px;
+  /*
+    background-color: antiquewhite;
+    */
+  background-color: blanchedalmond;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#top > h2 {
+  margin-left: 20px;
+}
+
+#game > div {
+  margin: 0 auto;
+  padding: 5px;
+  width: 900px;
+  border: 1px solid white;
+  background-color: antiquewhite;
+}
+
+#players > div {
+  border: 1px solid sandybrown;
+  padding: 10px;
+}
+
+#results {
+  color: plum;
+}
+
+#results.winner {
+  color: chartreuse;
+}
+
+#results.looser {
+  color: red;
+}
+
+#results.tie {
+  color: orange;
+}
+
+h2.winner {
+  color: chartreuse;
+}
+
+h2.looser {
+  color: red;
+}
+
+h2.tie {
+  color: orange;
+}
+
+.player > div.winner {
+  background-color: chartreuse;
+}
+
+.player > h2 {
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.player > div.looser {
+  background-color: red;
+}
+
+.player > div.tie {
+  background-color: orange;
+}
+
+.score, .totalscore {
+  margin: 1px auto;
+  padding: 5px;
+  border: 1px solid red;
+}
+
+.centre {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#pop-up {
+  width: 300px;
+  padding: 10px;
+  /*background-color: indianred;
+    */
+  background-color: aquamarine;
+  color: white;
+  box-shadow: 0 0 10px gray;
+  border-radius: 25px;
+  border: 3px solid black;
+  /*
+    border:solid 1px black;
+    box-shadow:0px 0px 5px yellow, 5px 5px 5px black;
+    */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*
+    animate this opacity property
+    from 0 to 1    
+    */
+  opacity: 0;
+  /* 
+    ensure pointer events will go 'through' this section tag 
+    since it might  otherwise overlap the buttons and make them unclickable
+    */
+  pointer-events: none;
+}
+
+#pop-up.show {
+  opacity: 1;
+}
+
+#pop-up.hide {
+  opacity: 0;
+}
+
+#btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  background-color: inherit;
+  color: inherit;
+  border: solid 1px white;
+  cursor: pointer;
+  /* ensure pointer events will apply to the button */
+  pointer-events: all;
+}
